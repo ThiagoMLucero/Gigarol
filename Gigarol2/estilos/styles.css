@@ -1,0 +1,669 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Araboto';
+    src: url(/fonts/KOMIKAX_.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #EAE4F2;
+    font-family: 'Araboto', sans-serif;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+      
+}
+
+header {
+    height: 140px;
+    background-color: #52348a;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: solid 15px black;
+}
+
+.contenedorImg {
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+
+}
+
+.logo {
+    width: 300px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    font-size: 20px;
+    font-weight: 20px;
+    color: #F2E33E;
+    width: 100%;
+
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 10px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+    margin: 0 20px 0 20px;
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+& a:hover {
+
+    text-decoration: underline;
+
+}
+
+.eslogan {
+
+    height: 90vh;
+    background-image: url('/imagenes_gigarol/banner_superheores.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid #000 10px;
+    margin: 0;
+}
+
+.siNoExiste {
+    height: 65vh;
+    width: 65vh;
+    z-index: 1;
+}
+
+.botonImg {
+
+    height: 13vh;
+    width: 13vh;
+    object-fit: contain;
+    scroll-behavior: smooth;
+}
+
+#carousel-descripcion {
+
+    display: grid;
+    grid-template-columns: 1fr 5fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas:
+        ". vacio vacio ."
+        ". contenedor-carousel descripcion . ";
+    height: 110vh;
+    gap: 40px;
+    align-items: center;
+    justify-self: center;
+    background-image: url(/imagenes_gigarol/fondo_banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #52348a;
+
+}
+
+.contenedor-carousel {
+    grid-area: contenedor-carousel;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-content: center;
+    gap: 10px;
+    height: 90%;
+    overflow: hidden;
+
+}
+
+.carousel {
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid 5px #449C57;
+
+}
+
+.carousel .grande {
+
+    width: 200%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
+
+}
+
+.carousel .grande img {
+    width: calc(100% / 4);
+    height: 100%;
+    object-fit: fill;
+}
+
+.controles {
+
+    border: none;
+    height: 90%;
+    font-size: 80px;
+    background: none;
+    color: #F2E33E;
+
+}
+
+.descripcion {
+    grid-area: descripcion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    width: 80%;
+    font-size: 30px;
+    color: #EAE4F2;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.descripcion img {
+
+    width: 50%;
+    object-fit: contain;
+
+}
+
+.descripcion button {
+
+    width: 45%;
+    border: none;
+    height: 40px;
+    background-color: #449C57;
+    color: #F2E33E;
+    border-radius: 10px;
+    font-size: 80%;
+    font-family: 'Araboto', sans-serif;
+    text-shadow: inherit;
+
+}
+
+.descripcion button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.descripcion p {
+
+    text-shadow: none;
+}
+
+footer {
+    height: 80px;
+    background: #EAE4F2;
+    border-top: solid black 10px;
+}
+
+footer img {
+
+    height: 70%;
+    margin: 2% 0 2% 5%;
+
+}
+
+/* Todo lo anterior es el index, lo siguiente son las clases e ids de los elemetos del html "contacto" */
+
+.contacto {
+
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 4fr 3fr 1fr;
+    grid-template-areas: 
+    ".  contacto contacto ."
+    ". ubicacion lateral .";
+    background-image: url(/imagenes_gigarol/fondo_banner.png);
+    background-size: cover;
+    font-size: 180%;
+}
+
+.contacto #titulo {
+
+    grid-area: contacto;
+    align-self: center;
+    text-align: center;
+    color: #F2E33E;
+ 
+}
+
+ .ubicacion {
+
+    grid-area: ubicacion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #52348a;
+    border-radius: 5%;
+    height: 70vh;
+    padding: 5%;
+    margin: 5%;
+
+}
+
+.ubicacion #informacion {
+ 
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #EAE4F2;
+    
+}
+#mapa {
+    display: flex;
+    justify-content: center;
+}
+
+ #mapa iframe {
+
+    height: 450px;
+    width: 650px;
+    border-radius: 5%;
+     
+ }
+
+.lateral {
+
+    grid-area: lateral;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#imagen{
+
+    height: auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.lateral .texto-redes {
+
+    color: #F2E33E;
+}
+
+#redes{
+
+    display: flex;
+   justify-content: space-around;
+   width: 90%;
+   height: 15%;
+}
+
+#redes img{
+    
+    object-fit: contain;
+    background-color: #52348a;
+    border-radius: 10%;
+    padding: 2%;
+}
+/* Estilos del html catalogo */
+
+.catalogo{
+ display: grid;
+ grid-template-columns: 1fr 8fr 1fr;
+ grid-template-areas: ". categorias .";
+ padding: 3%;
+ background-image: url(/imagenes_gigarol/fondo_banner.png);
+ background-repeat: no-repeat;
+ background-size: contain;
+}
+
+.categorias{
+    
+    grid-area: categorias;
+    height: 100vh;
+
+}
+
+#contenedor-titulo{
+
+    color: #F2E33E;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenedor{
+
+    display: flex;
+    padding: 10px;
+}
+
+.uno{
+
+    justify-content: space-between;
+    height: 40%;
+}
+
+.dos{
+
+    justify-content: center;
+    height: 40%;
+}
+
+.genero{
+    background-color: #52348a;
+    width: 25%;
+    height: 100%;
+    border-radius: 5%;
+    text-align: center;
+    align-content: center;
+    color: #F2E33E;
+}
+
+.dos .genero{
+
+    width: 25.5%;
+    margin: 5% 7% 0 7%;
+}
+.genero img {
+
+    width: 70%;
+    height: 70%;
+    border-radius: 5%;
+    object-fit: cover;
+    border: solid 10px #449C57;
+}
+
+/* Estilo del html Categorias-- */
+
+#categoria{
+
+    display: grid;
+    grid-template-columns: 0.5fr 10fr 0.5fr;
+    grid-template-areas: ". productos .";
+    padding: 3%;
+    background-image: url(/imagenes_gigarol/fondo_banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.contenedor-productos{
+
+    grid-area: productos;
+    height: 100vh;
+}
+
+.fila {
+
+    display: flex;
+    padding: 10px;
+
+}
+
+.superior{
+
+    justify-content: space-evenly;
+    height: 40%;
+}
+
+.inferior{
+
+    justify-content: center;
+    height: 40%;
+
+}
+
+.inferior .producto{
+
+    margin: 2% 2% 2% 2%;
+}
+
+.producto{
+
+    background-color: #52348a;
+    width: 20%;
+    height: 100%;
+    border-radius: 5%;
+    text-align: center;
+    align-content: center;
+    color: #F2E33E;
+}
+
+
+.producto img{
+
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    border: solid #449C57 10px;
+    border-radius: 5%;
+}
+
+/* Estilo correspondiente a la pagina producto */
+
+#producto{
+
+    height: 100vh;
+    background-image: url(/imagenes_gigarol/fondo_banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-areas: 
+    ". producto .";
+    grid-template-columns: 2fr 5fr 2fr;
+}
+
+.producto-informacion{
+
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    grid-area: producto;
+    height: 75%;
+    
+}
+
+.contenedor-imagen{
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-right: 5%;
+
+}
+
+.contenedor-imagen img{
+
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    border: solid 5px #52348a;
+    border-radius: 10px;
+}
+
+#informacion-producto{
+
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    color: #F2E33E;
+    justify-content: space-between;
+    margin-left: 5%;
+    
+}
+
+#titulo-producto{
+    
+    font-size: 40px;
+    text-align: center;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+#descripcion-producto {
+
+    color: #52348a;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+#precio {
+
+    display: flex;
+    font-size: 45px;
+    background-image: url(/imagenes_gigarol/Precio.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: contain;
+    margin-top: 5px;
+    width: 190px;
+    height: 150px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 30%;
+
+}
+
+.boton-compra{
+
+    width: 80%;
+    height: 10%;
+    background-color: #52348a;
+    border-radius: 10px;
+    font-family: inherit;
+    color: #F2E33E;
+    font-size: 150%;
+
+}
+
+/*Estilos propios del formulario */
+
+#registro {
+
+    background-image: url(/imagenes_gigarol/fondo_banner.png);
+    background-size: contain;
+}
+
+#formulario{
+
+    display: grid;
+    grid-template-areas: ". imagen formulario .";
+    grid-template-columns: 1fr  4fr 4fr 1fr;
+    padding: 2% 5% 2% 5%;
+    height: 100vh;
+}
+
+.imagen-formulario{
+
+    grid-area: imagen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-formulario img {
+
+    height: 65%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.ingreso{
+
+    grid-area: formulario;
+    width: 80%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.datos{
+    
+    border: solid 3px #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    color: #F2E33E;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    padding: 4%;
+    background-color: #52348a;
+}
+
+.datos h1{
+    text-align: center;
+}
+
+.datos form {
+
+    font-size: 18px;
+    
+    
+}
+
+
+.contenedor-form{
+    
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0 5% 0;
+}
+
+.contenedor-form input{
+
+    width: 80%;
+    height: 28px;
+    border: solid 3px #000;
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+.datos button {
+
+    width: 50%;
+    color: #F2E33E;
+    text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+    background-color: #449C57;
+    border: none;
+    font-family: inherit;
+    padding: 1%;
+    border-radius: 10px;
+}
